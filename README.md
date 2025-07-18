@@ -13,14 +13,7 @@
 - 🌐 **Chrome Extension** – bring RealTalk AI to any text field on the web
 - 👥 **User Registration** – register and fetch user-specific content
 
----
 
-## 🖼️ UI Preview
-
-![Dashboard Screenshot](./screenshots/dashboard.png)
-![Chrome Extension](./screenshots/extension.png)
-
----
 
 ## 🛠️ Tech Stack
 
