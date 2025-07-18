@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 🧠 RealTalk AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**RealTalk AI** is a full-stack AI-powered messaging assistant that helps you craft better replies across platforms. Powered by LLMs, it suggests responses in real-time based on your preferred tone, creativity, and platform. Includes full analytics, history tracking, and a Chrome extension for seamless use across the web.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- ✨ **LLM-powered Suggestions** (supports multiple models like `phi`, `default`)
+- ⚙️ **Personalized Settings** – tone, platform, creativity level, model preference
+- 📊 **User Analytics** – track model usage and activity
+- 🕓 **History Log** – view previous inputs and generated responses
+- 🌐 **Chrome Extension** – bring RealTalk AI to any text field on the web
+- 👥 **User Registration** – register and fetch user-specific content
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🖼️ UI Preview
 
-### `npm test`
+![Dashboard Screenshot](./screenshots/dashboard.png)
+![Chrome Extension](./screenshots/extension.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Layer      | Technology                         |
+|------------|-------------------------------------|
+| Frontend   | React, Tailwind CSS, Shadcn
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚡ API Endpoints (FastAPI)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Endpoint                  | Method | Description                      |
+|---------------------------|--------|----------------------------------|
+| `/api/suggest`           | POST   | Generate LLM suggestions         |
+| `/api/history/{user_id}` | GET    | Fetch message history            |
+| `/api/analytics`         | GET    | Get user analytics               |
+| `/api/register`          | POST   | Register a new user              |
+| `/api/users`             | GET    | Get all registered users         |
+| `/api/settings`          | POST   | Save user settings               |
+| `/api/settings/{id}`     | GET    | Fetch user settings              |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Future Enhancements
+ OAuth / JWT Auth
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ GPT-4o or Claude Integration
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ Real-time feedback loop from suggestions
 
-## Learn More
+ Cross-device sync
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Backend
 
-### Code Splitting
+```bash
+cd backend
+uvicorn main:app --reload
+/UI      |
+| Backend    | FastAPI, Python                     |
+| Database   | SQLite                              |
+| LLM        | Phi Model/ OpenAi           |
+| Extension  | Chrome Manifest V3, JS              |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
